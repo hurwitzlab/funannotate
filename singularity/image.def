@@ -1,0 +1,11 @@
+BootStrap: docker
+From: nextgenusfs/funannotate
+
+%runscript
+    exec funannotate
+
+%post
+    # Mount points for TACC directories
+    mkdir /home1
+    mkdir /scratch
+    mkdir /work
